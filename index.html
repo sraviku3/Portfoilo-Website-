@@ -1,270 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Supraja Ravi Kumar | AI/ML Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<title>Sai Supraja Ravi Kumar | AI/ML Engineer</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --accent: #ef4444;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #ffffff;
+            --bg-subtle: #f8fafc;
+            --glass: rgba(255, 255, 255, 0.8);
+            --shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+        }
 
-<!-- SEO -->
-<meta name="description" content="AI/ML Engineer & Data Scientist specializing in Generative AI, RAG systems, LLMs, and scalable ML platforms.">
-<meta name="keywords" content="AI Engineer, Machine Learning, Data Scientist, Generative AI, RAG, LLM">
-<meta name="author" content="Sai Supraja Ravi Kumar">
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            background: var(--bg-light); 
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.2rem 8%; background: var(--glass);
+            backdrop-filter: blur(15px); border-bottom: 1px solid #e2e8f0;
+        }
+        .logo { font-family: 'Outfit'; font-weight: 700; font-size: 1.4rem; color: var(--text-main); text-decoration: none; }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
 
-<style>
-:root{
---bg:#0b0b0b;--red:#e63946;--glow:rgba(230,57,70,.4);
---white:#fff;--grey:#aaa;--glass:rgba(255,255,255,.04);
---border:rgba(255,255,255,.08);
-}
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6}
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            padding: 100px 8% 50px; background: radial-gradient(circle at 90% 10%, #f0f7ff 0%, #ffffff 50%);
+        }
+        .hero-container { display: flex; align-items: center; gap: 4rem; max-width: 1200px; }
+        
+        .avatar-upload { position: relative; width: 280px; height: 280px; flex-shrink: 0; }
+        .avatar-preview {
+            width: 100%; height: 100%; border-radius: 30px; object-fit: cover;
+            box-shadow: var(--shadow); border: 4px solid #fff; transition: 0.4s;
+        }
+        .upload-hint {
+            position: absolute; bottom: -10px; right: -10px; background: var(--primary);
+            color: white; padding: 10px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+        }
 
-/* NAV */
-nav{
-position:fixed;top:0;width:100%;z-index:1000;
-display:flex;justify-content:space-between;align-items:center;
-padding:1rem 8%;background:rgba(0,0,0,.8);backdrop-filter:blur(12px);
-border-bottom:1px solid var(--border)
-}
-.logo{font-weight:800;text-decoration:none;color:white}
-.logo span{color:var(--red)}
-.nav-links{display:flex;list-style:none}
-.nav-links li{margin-left:1.5rem}
-.nav-links a{color:var(--grey);text-decoration:none;font-size:.85rem}
-.nav-links a:hover{color:var(--red)}
+        .hero-content h1 { font-family: 'Outfit'; font-size: 3.5rem; line-height: 1.1; margin-bottom: 1rem; }
+        .hero-content h2 { font-size: 1.5rem; color: var(--text-muted); font-weight: 400; margin-bottom: 2rem; }
+        #typewriter { color: var(--primary); font-weight: 700; border-right: 3px solid var(--primary); padding-right: 5px; }
 
-/* HERO */
-.hero{
-min-height:100vh;display:flex;flex-direction:column;
-justify-content:center;align-items:center;text-align:center;padding:0 10%
-}
-.hero-avatar{
-width:180px;height:180px;border-radius:50%;overflow:hidden;
-border:3px solid var(--red);box-shadow:0 0 30px var(--glow);
-margin-bottom:2rem;transition:.4s
-}
-.hero-avatar img{width:100%;height:100%;object-fit:cover}
-.hero-avatar:hover{transform:scale(1.05)}
+        /* --- SECTION GENERIC --- */
+        .section { padding: 100px 8%; max-width: 1300px; margin: auto; }
+        .section-title { font-family: 'Outfit'; font-size: 2.2rem; margin-bottom: 3.5rem; text-align: center; }
+        .section-title span { color: var(--primary); }
 
-.hero h1{font-size:3.5rem;font-weight:800}
-.hero h2{color:var(--grey);font-weight:300;margin:1rem 0 2rem}
-#typewriter-text{color:var(--red);font-weight:600}
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
 
-.social-icons{display:flex;gap:1.5rem;margin-bottom:2rem}
-.social-icons a{color:var(--grey);font-size:1.6rem}
-.social-icons a:hover{color:var(--red)}
+        /* --- CARDS --- */
+        .card {
+            background: #fff; padding: 2.5rem; border-radius: 20px;
+            border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: var(--shadow); border-color: var(--primary); }
+        
+        /* --- EDUCATION & EXPERIENCE --- */
+        .exp-meta { display: flex; justify-content: space-between; margin-bottom: 1rem; align-items: center; }
+        .badge { background: #eff6ff; color: var(--primary); padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; }
+        
+        /* --- PROJECTS --- */
+        .project-img-container {
+            width: 100%; height: 200px; border-radius: 12px; overflow: hidden;
+            margin-bottom: 1.5rem; position: relative; background: #f1f5f9;
+        }
+        .project-img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .img-edit-btn {
+            position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9);
+            border: none; padding: 5px 10px; border-radius: 5px; font-size: 0.7rem; cursor: pointer;
+        }
 
-.btn{
-padding:.8rem 2rem;border-radius:50px;
-border:2px solid var(--red);color:white;text-decoration:none;
-font-weight:600;transition:.3s
-}
-.btn:hover{background:var(--red);box-shadow:0 0 20px var(--red)}
+        /* --- SKILLS --- */
+        .skill-group { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+        .tag { background: var(--bg-subtle); border: 1px solid #e2e8f0; padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; color: var(--text-main); }
 
-.section{padding:100px 8%;max-width:1400px;margin:auto}
-.section h2{text-align:center;font-size:2.2rem;margin-bottom:4rem}
-.section h2 span{color:var(--red)}
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-block; padding: 1rem 2.5rem; border-radius: 12px;
+            background: var(--primary); color: white; text-decoration: none;
+            font-weight: 600; transition: 0.3s; border: none; cursor: pointer;
+        }
+        .btn:hover { background: #1d4ed8; transform: scale(1.02); box-shadow: 0 10px 20px rgba(37,99,235,0.2); }
 
-.grid{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:2rem
-}
+        footer { background: var(--bg-subtle); padding: 4rem 8% 2rem; text-align: center; border-top: 1px solid #e2e8f0; }
 
-.card{
-background:var(--glass);border:1px solid var(--border);
-border-radius:20px;padding:2rem;transition:.4s
-}
-.card:hover{transform:translateY(-8px);border-color:var(--red)}
-
-.card img{
-width:100%;height:180px;object-fit:cover;
-border-radius:12px;margin-bottom:1rem
-}
-
-.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
-.tag{font-size:.7rem;border:1px solid var(--border);padding:4px 10px;border-radius:4px;color:var(--grey)}
-
-.project-links{display:flex;gap:1rem;margin:.5rem 0}
-.project-links a{
-font-size:.8rem;border:1px solid var(--red);
-padding:4px 12px;border-radius:20px;color:var(--red);text-decoration:none
-}
-.project-links a:hover{background:var(--red);color:white}
-
-.cert-card{text-align:center}
-.cert-card img{width:80px;margin-bottom:1rem;filter:grayscale(100%)}
-.cert-card:hover img{filter:none}
-
-footer{text-align:center;padding:2rem;color:var(--grey);font-size:.8rem}
-
-@media(max-width:768px){.nav-links{display:none}}
-</style>
+        @media (max-width: 968px) {
+            .hero-container { flex-direction: column; text-align: center; }
+            .nav-links { display: none; }
+        }
+    </style>
 </head>
-
 <body>
 
-<nav>
-<a class="logo" href="#">SAI<span>SUPRAJA</span></a>
-<ul class="nav-links">
-<li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#certs">Certifications</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+    <nav>
+        <a class="logo" href="#">SAI<span>SUPRAJA</span></a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certs">Certifications</a></li>
+        </ul>
+    </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-<div class="hero-avatar">
-<img src="assets/profile.jpg" alt="Sai Supraja Ravi Kumar">
-</div>
-<h1>Sai Supraja Ravi Kumar</h1>
-<h2>Building <span id="typewriter-text"></span></h2>
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="avatar-upload">
+                <img src="https://via.placeholder.com/300" id="profile-display" class="avatar-preview" alt="Profile">
+                <label for="profile-upload" class="upload-hint">
+                    <i class="fa fa-camera"></i>
+                </label>
+                <input type="file" id="profile-upload" hidden accept="image/*" onchange="previewImage(this, 'profile-display')">
+            </div>
+            <div class="hero-content">
+                <h1>Hi, I'm Sai Supraja Ravi Kumar</h1>
+                <h2>Engineering <span id="typewriter"></span></h2>
+                <div style="margin-bottom: 2.5rem;">
+                    <a href="mailto:saisuprajaravikumar.2025@gmail.com" class="btn">Get In Touch</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#" style="margin-right:15px; font-size:1.5rem; color:var(--text-muted)"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="font-size:1.5rem; color:var(--text-muted)"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="social-icons">
-<a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-<a href="https://linkedin.com/in" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="mailto:saisuprajaravikumar.2025@gmail.com"><i class="fa fa-envelope"></i></a>
-</div>
+    <section class="section" id="education">
+        <h2 class="section-title">Academic <span>Foundation</span></h2>
+        <div class="grid">
+            <div class="card">
+                <div class="exp-meta">
+                    <span class="badge">2023 - 2025</span>
+                    <strong style="color:var(--primary)">GPA: 3.98</strong>
+                </div>
+                <h3>MS in Data Science</h3>
+                <p>University of Houston, Texas</p>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 10px;">Focus: Deep Learning, Natural Language Processing, Statistical Inference.</p>
+            </div>
+        </div>
+    </section>
 
-<a href="assets/resume.pdf" class="btn" download>Download Resume</a>
-</section>
+    <section class="section" id="experience" style="background: var(--bg-subtle);">
+        <h2 class="section-title">Work <span>Experience</span></h2>
+        <div class="grid">
+            <div class="card">
+                <div class="exp-meta"><span class="badge">Current</span></div>
+                <h3>AI/ML Engineer</h3>
+                <h4 style="color:var(--text-muted); margin-bottom:1rem">Optum (UnitedHealth Group)</h4>
+                <ul style="list-style: none; font-size: 0.9rem;">
+                    <li>• Developed RAG pipelines reducing research time by 70%.</li>
+                    <li>• Architected LLM inference for 9M+ medical records.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="exp-meta"><span class="badge">2023</span></div>
+                <h3>GenAI Researcher</h3>
+                <h4 style="color:var(--text-muted); margin-bottom:1rem">University of Houston</h4>
+                <p>Engineered agentic workflows using LangGraph and Azure AI services.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- EXPERIENCE -->
-<section class="section" id="experience">
-<h2>Professional <span>Experience</span></h2>
-<div class="grid">
+    <section class="section" id="skills">
+        <h2 class="section-title">Technical <span>Stack</span></h2>
+        <div class="grid">
+            <div class="card">
+                <h3 style="margin-bottom:1.5rem"><i class="fa fa-brain" style="color:var(--primary)"></i> Machine Learning</h3>
+                <div class="skill-group">
+                    <span class="tag">Generative AI</span><span class="tag">LLMs</span><span class="tag">RAG</span>
+                    <span class="tag">Computer Vision</span><span class="tag">PyTorch</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3 style="margin-bottom:1.5rem"><i class="fa fa-code" style="color:var(--primary)"></i> Engineering</h3>
+                <div class="skill-group">
+                    <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Docker</span>
+                    <span class="tag">Kubernetes</span><span class="tag">AWS / Azure</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-<h3>AI/ML Engineer – Optum</h3>
-<p>Built LLM-powered RAG applications reducing research time by 70%. Designed scalable inference pipelines over 9M+ records.</p>
-<div class="tags"><span class="tag">OpenAI</span><span class="tag">LangChain</span><span class="tag">AWS</span></div>
-</div>
+    <section class="section" id="projects" style="background: var(--bg-subtle);">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="grid">
+            <div class="card">
+                <div class="project-img-container">
+                    <img src="https://via.placeholder.com/400x200" id="p1-img">
+                    <label for="p1-upload" class="img-edit-btn">Change Cover</label>
+                    <input type="file" id="p1-upload" hidden onchange="previewImage(this, 'p1-img')">
+                </div>
+                <h3>GenAI Summarization</h3>
+                <p style="font-size: 0.9rem; margin-bottom:1rem">Enterprise-grade NLP pipeline using Transformers.</p>
+                <div class="skill-group">
+                    <span class="tag">HuggingFace</span><span class="tag">FastAPI</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="project-img-container">
+                    <img src="https://via.placeholder.com/400x200" id="p2-img">
+                    <label for="p2-upload" class="img-edit-btn">Change Cover</label>
+                    <input type="file" id="p2-upload" hidden onchange="previewImage(this, 'p2-img')">
+                </div>
+                <h3>Telecom Merger Strategy</h3>
+                <p style="font-size: 0.9rem; margin-bottom:1rem">Financial simulation for ARPU optimization.</p>
+                <div class="skill-group">
+                    <span class="tag">Forecasting</span><span class="tag">Tableau</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-<h3>GenAI Researcher – University of Houston</h3>
-<p>Developed biomedical RAG systems and agentic workflows using LangGraph.</p>
-<div class="tags"><span class="tag">Transformers</span><span class="tag">Azure</span></div>
-</div>
+    <section class="section" id="certs">
+        <h2 class="section-title">Industry <span>Certs</span></h2>
+        <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="card" style="text-align:center">
+                <i class="fab fa-aws" style="font-size:3rem; color:#FF9900"></i>
+                <h4 style="margin-top:1rem">AWS Machine Learning</h4>
+            </div>
+            <div class="card" style="text-align:center">
+                <i class="fab fa-microsoft" style="font-size:3rem; color:#00A4EF"></i>
+                <h4 style="margin-top:1rem">Azure AI Engineer</h4>
+            </div>
+            <div class="card" style="text-align:center">
+                <i class="fab fa-google" style="font-size:3rem; color:#4285F4"></i>
+                <h4 style="margin-top:1rem">Google Data Professional</h4>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-<h3>Data Analyst (ML) – Capgemini</h3>
-<p>Implemented LSTM forecasting with 92% accuracy and ETL pipelines processing 3M+ records.</p>
-<div class="tags"><span class="tag">LSTM</span><span class="tag">Airflow</span></div>
-</div>
+    <footer>
+        <p>© 2026 Sai Supraja Ravi Kumar | Built with Precision</p>
+    </footer>
 
-</div>
-</section>
+    <script>
+        // TYPEWRITER EFFECT
+        const words = ["Generative AI Models", "Scalable RAG Systems", "Agentic AI Workflows"];
+        let wordIdx = 0; let charIdx = 0; let isDeleting = false;
+        const target = document.getElementById("typewriter");
 
-<!-- PROJECTS -->
-<section class="section" id="projects">
-<h2>Featured <span>Projects</span></h2>
-<div class="grid">
+        function typeEffect() {
+            const currentWord = words[wordIdx];
+            if (isDeleting) {
+                target.textContent = currentWord.substring(0, charIdx--);
+            } else {
+                target.textContent = currentWord.substring(0, charIdx++);
+            }
 
-<div class="card">
-<img src="assets/project-summarization.jpg">
-<h3>GenAI Text Summarization</h3>
-<p>Abstractive NLP pipeline using Transformers & RAG.</p>
-<div class="project-links">
-<a href="#" target="_blank">Live Demo</a>
-<a href="#" target="_blank">GitHub</a>
-</div>
-<div class="tags"><span class="tag">NLP</span><span class="tag">LLM</span></div>
-</div>
+            if (!isDeleting && charIdx === currentWord.length + 1) {
+                isDeleting = true;
+                setTimeout(typeEffect, 1500);
+            } else if (isDeleting && charIdx === 0) {
+                isDeleting = false;
+                wordIdx = (wordIdx + 1) % words.length;
+                setTimeout(typeEffect, 500);
+            } else {
+                setTimeout(typeEffect, isDeleting ? 50 : 100);
+            }
+        }
 
-<div class="card">
-<img src="assets/project-telecom.jpg">
-<h3>Telecom Merger Strategy</h3>
-<p>Financial simulation dashboards showing ARPU uplift.</p>
-<div class="project-links">
-<a href="#" target="_blank">Live</a>
-<a href="#" target="_blank">GitHub</a>
-</div>
-<div class="tags"><span class="tag">Forecasting</span><span class="tag">Tableau</span></div>
-</div>
+        // IMAGE PREVIEW LOGIC
+        function previewImage(input, displayId) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById(displayId).src = e.target.result;
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
 
-<div class="card">
-<img src="assets/project-ev.jpg">
-<h3>EV Market Forecasting</h3>
-<p>End-to-end ETL + BI pipeline for EV demand analysis.</p>
-<div class="project-links">
-<a href="#" target="_blank">Live</a>
-<a href="#" target="_blank">GitHub</a>
-</div>
-<div class="tags"><span class="tag">ETL</span><span class="tag">SQL</span></div>
-</div>
-
-</div>
-</section>
-
-<!-- SKILLS -->
-<section class="section" id="skills">
-<h2>Technical <span>Expertise</span></h2>
-<div class="grid">
-
-<div class="card"><h3>AI / ML</h3><p>Generative AI, RAG, LLMs, NLP, Deep Learning</p></div>
-<div class="card"><h3>Programming</h3><p>Python, SQL, R, Java, C++, JavaScript</p></div>
-<div class="card"><h3>Cloud & Data</h3><p>AWS, Azure, Databricks, Spark, Snowflake</p></div>
-<div class="card"><h3>DevOps</h3><p>Docker, Kubernetes, MLflow, Airflow, CI/CD</p></div>
-
-</div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="section" id="certs">
-<h2>Professional <span>Certifications</span></h2>
-<div class="grid">
-
-<div class="card cert-card">
-<img src="assets/cert-aws.png">
-<h3>AWS Machine Learning</h3>
-</div>
-
-<div class="card cert-card">
-<img src="assets/cert-azure.png">
-<h3>Azure AI Engineer</h3>
-</div>
-
-<div class="card cert-card">
-<img src="assets/cert-gcp.png">
-<h3>Google Data Engineer</h3>
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-<h2>Get In <span>Touch</span></h2>
-<p style="text-align:center;color:var(--grey)">
-MS Data Science · University of Houston · GPA 3.98
-</p>
-<div style="text-align:center;margin-top:2rem">
-<a href="mailto:saisuprajaravikumar.2025@gmail.com" class="btn">Send Email</a>
-</div>
-</section>
-
-<footer>
-© 2026 Sai Supraja Ravi Kumar · AI/ML Engineer
-</footer>
-
-<script>
-const words=["Generative AI","RAG Systems","Scalable ML","Agentic AI"];
-let i=0,j=0,del=false;
-const el=document.getElementById("typewriter-text");
-function type(){
-if(!del&&j<=words[i].length){el.textContent=words[i].slice(0,j++)}
-else if(del&&j>=0){el.textContent=words[i].slice(0,j--)}
-if(j===words[i].length){del=true;setTimeout(()=>{},800)}
-if(del&&j===0){del=false;i=(i+1)%words.length}
-setTimeout(type,del?60:100)}
-type();
-</script>
-
+        document.addEventListener('DOMContentLoaded', typeEffect);
+    </script>
 </body>
 </html>
