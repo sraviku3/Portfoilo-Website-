@@ -43,13 +43,13 @@
         }
         .logo { font-weight: 800; font-size: 1.2rem; text-decoration: none; color: var(--text); }
         .logo span { color: var(--primary); }
-        .nav-links { display: flex; list-style: none; gap: 1.5rem; }
-        .nav-links a { text-decoration: none; color: var(--secondary); font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links { display: flex; list-style: none; gap: 1.2rem; }
+        .nav-links a { text-decoration: none; color: var(--secondary); font-weight: 500; font-size: 0.85rem; transition: 0.3s; }
         .nav-links a:hover { color: var(--primary); }
         
         .theme-toggle {
-            cursor: pointer; padding: 5px 12px; border-radius: 20px;
-            border: 1px solid var(--border); background: var(--card-bg); color: var(--text);
+            cursor: pointer; padding: 6px 14px; border-radius: 20px;
+            border: 1px solid var(--border); background: var(--card-bg); color: var(--text); font-size: 0.8rem; font-weight: 600;
         }
 
         /* HERO SECTION */
@@ -59,62 +59,63 @@
         }
         .profile-container { position: relative; cursor: pointer; margin-bottom: 2rem; }
         .hero-avatar {
-            width: 200px; height: 200px; border-radius: 50%; overflow: hidden;
+            width: 180px; height: 180px; border-radius: 50%; overflow: hidden;
             border: 4px solid var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         .hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
         .upload-hint {
-            position: absolute; bottom: 10px; right: 10px; background: var(--primary);
-            color: white; padding: 8px; border-radius: 50%; font-size: 0.8rem;
+            position: absolute; bottom: 5px; right: 5px; background: var(--primary);
+            color: white; padding: 8px; border-radius: 50%; font-size: 0.7rem;
         }
 
-        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 0.5rem; }
-        .hero h2 { color: var(--secondary); font-weight: 400; font-size: 1.5rem; margin-bottom: 2rem; }
-        #typewriter { color: var(--primary); font-weight: 700; }
+        .hero h1 { font-size: 3.2rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .hero h2 { color: var(--secondary); font-weight: 400; font-size: 1.4rem; margin-bottom: 1.5rem; }
+        #typewriter { color: var(--primary); font-weight: 700; border-right: 2px solid var(--primary); padding-right: 5px; }
 
         /* SECTIONS */
-        section { padding: 100px 10%; max-width: 1200px; margin: auto; }
-        .section-title { font-size: 2.5rem; margin-bottom: 3rem; text-align: center; }
+        section { padding: 80px 10%; max-width: 1300px; margin: auto; }
+        .section-title { font-size: 2.2rem; margin-bottom: 2.5rem; text-align: center; }
         .section-title span { color: var(--primary); }
 
+        /* ABOUT ME BOX */
+        .about-box {
+            background: var(--card-bg); border: 1px solid var(--border);
+            padding: 3rem; border-radius: 24px; display: flex; gap: 3rem; align-items: center;
+        }
+        .about-content h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary); }
+        .about-content p { color: var(--secondary); font-size: 1.05rem; text-align: justify; }
+
         /* GRID & CARDS */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
         .card {
             background: var(--card-bg); border: 1px solid var(--border);
-            padding: 2rem; border-radius: 16px; position: relative; overflow: hidden;
-            transition: transform 0.3s, border-color 0.3s;
+            padding: 2rem; border-radius: 16px; transition: 0.3s;
         }
-        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         
-        .experience-date { font-size: 0.8rem; color: var(--primary); font-weight: 600; }
-        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-        .tag { background: rgba(37, 99, 235, 0.1); color: var(--primary); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
+        .experience-date { font-size: 0.75rem; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+        .tag { background: rgba(37, 99, 235, 0.08); color: var(--primary); padding: 3px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; }
 
-        /* PROJECT IMAGE UPLOAD */
-        .project-img-wrapper { 
-            width: 100%; height: 180px; background: #ddd; border-radius: 12px; 
-            margin-bottom: 1.5rem; overflow: hidden; cursor: pointer; position: relative;
-        }
-        .project-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-
-        /* SKILLS */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
-        .skill-category h3 { font-size: 1.1rem; margin-bottom: 1rem; color: var(--primary); }
-        .skill-list { list-style: none; color: var(--secondary); font-size: 0.9rem; }
+        /* SKILLS GRID EXPANED */
+        .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .skill-category { background: var(--card-bg); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); }
+        .skill-category h3 { font-size: 1rem; margin-bottom: 1rem; color: var(--primary); border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 4px; }
+        .skill-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .skill-item { font-size: 0.85rem; color: var(--secondary); background: var(--bg); border: 1px solid var(--border); padding: 2px 8px; border-radius: 4px; }
 
         /* BUTTONS */
         .btn {
-            display: inline-block; padding: 0.8rem 2rem; border-radius: 8px;
+            display: inline-block; padding: 0.8rem 1.8rem; border-radius: 6px;
             background: var(--primary); color: white; text-decoration: none;
-            font-weight: 600; transition: 0.3s; border: none; cursor: pointer;
+            font-weight: 600; transition: 0.3s; border: none; cursor: pointer; font-size: 0.9rem;
         }
-        .btn:hover { opacity: 0.9; transform: scale(1.05); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3); }
 
-        footer { text-align: center; padding: 4rem 0; border-top: 1px solid var(--border); color: var(--secondary); font-size: 0.85rem; }
+        footer { text-align: center; padding: 3rem; border-top: 1px solid var(--border); color: var(--secondary); font-size: 0.8rem; }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .nav-links { display: none; }
+        @media (max-width: 900px) {
+            .about-box { flex-direction: column; text-align: center; padding: 2rem; }
         }
     </style>
 </head>
@@ -123,11 +124,11 @@
     <nav>
         <a href="#" class="logo">SAI<span>SUPRAJA</span></a>
         <ul class="nav-links">
+            <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#certs">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <button class="theme-toggle" onclick="toggleTheme()">Professional Shift</button>
@@ -142,192 +143,148 @@
             <input type="file" id="profile-upload" hidden onchange="previewImage(this, 'profile-img')">
         </div>
         <h1>Sai Supraja Ravi Kumar</h1>
-        <h2>Building <span id="typewriter"></span></h2>
-        <p style="max-width: 700px; margin-bottom: 2rem; color: var(--secondary);">
-            AI/ML Engineer with 4+ years of experience in Generative AI, RAG architectures, and scalable MLOps. 
-            Delivering production-grade AI across Healthcare and Finance.
-        </p>
-        <div style="display: flex; gap: 1rem;">
-            <a href="mailto:saisuprajaravikumar.2025@gmail.com" class="btn">Get In Touch</a>
-            <a href="#" class="btn" style="background: transparent; border: 1px solid var(--primary); color: var(--primary);">View Resume</a>
+        <h2>Architecting <span id="typewriter"></span></h2>
+        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+            <a href="mailto:saisuprajaravikumar.2025@gmail.com" class="btn">Hire Me</a>
+            <a href="#" class="btn" style="background: transparent; border: 1px solid var(--primary); color: var(--primary);">Download CV</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-box">
+            <div class="about-content">
+                <h3>AI/ML Engineer & Researcher</h3>
+                <p>
+                    I am an AI/ML Engineer with 4+ years of experience building and deploying machine learning, deep learning, and Generative AI systems across healthcare, finance, and enterprise analytics. I specialize in designing end-to-end ML platforms—from robust data pipelines to cloud-native LLM-powered applications. 
+                </p>
+                <br>
+                <p>
+                    My expertise lies in RAG architectures, predictive modeling, and scalable MLOps. I am passionate about building reliable, explainable, and production-grade AI systems that bridge the gap between complex research and real-world business value.
+                </p>
+            </div>
         </div>
     </section>
 
     <section id="education">
-        <h2 class="section-title">Academic <span>Foundation</span></h2>
+        <h2 class="section-title">Education</h2>
         <div class="grid">
             <div class="card">
+                <span class="experience-date">Master of Science</span>
                 <h3>University of Houston</h3>
-                <p><strong>Master of Science, Data Science</strong></p>
-                <p class="experience-date">GPA: 3.98</p>
+                <p><strong>Data Science</strong></p>
+                <p style="color: var(--primary); font-weight: 600;">GPA: 3.98</p>
             </div>
             <div class="card">
+                <span class="experience-date">Bachelor of Engineering</span>
                 <h3>Anna University</h3>
-                <p><strong>Bachelor of Engineering, ECE</strong></p>
-                <p class="experience-date">GPA: 8.68</p>
+                <p><strong>Electronics & Communication</strong></p>
+                <p style="color: var(--primary); font-weight: 600;">GPA: 8.68</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background: var(--card-bg); border-radius: 50px;">
+        <h2 class="section-title">Technical <span>Expertise</span></h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Machine Learning & AI</h3>
+                <div class="skill-list">
+                    <span class="skill-item">PyTorch</span><span class="skill-item">TensorFlow</span><span class="skill-item">Keras</span>
+                    <span class="skill-item">LLMs</span><span class="skill-item">RAG</span><span class="skill-item">LangChain</span>
+                    <span class="skill-item">Hugging Face</span><span class="skill-item">Deep Learning</span><span class="skill-item">NLTK</span>
+                    <span class="skill-item">JAX</span><span class="skill-item">Vector Databases</span><span class="skill-item">Prompt Engineering</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Programming</h3>
+                <div class="skill-list">
+                    <span class="skill-item">Python</span><span class="skill-item">SQL</span><span class="skill-item">R</span>
+                    <span class="skill-item">Java</span><span class="skill-item">C++</span><span class="skill-item">JavaScript</span>
+                    <span class="skill-item">Matlab</span><span class="skill-item">PostgreSQL</span><span class="skill-item">React</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Cloud & DevOps</h3>
+                <div class="skill-list">
+                    <span class="skill-item">AWS</span><span class="skill-item">Azure AI</span><span class="skill-item">GCP</span>
+                    <span class="skill-item">Docker</span><span class="skill-item">Kubernetes</span><span class="skill-item">Databricks</span>
+                    <span class="skill-item">MLflow</span><span class="skill-item">Snowflake</span><span class="skill-item">Apache Spark</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Analysis & Tools</h3>
+                <div class="skill-list">
+                    <span class="skill-item">Power BI</span><span class="skill-item">Tableau</span><span class="skill-item">Pandas</span>
+                    <span class="skill-item">Scikit-learn</span><span class="skill-item">A/B Testing</span><span class="skill-item">Git</span>
+                    <span class="skill-item">REST APIs</span><span class="skill-item">Time Series</span>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="experience">
-        <h2 class="section-title">Professional <span>Timeline</span></h2>
+        <h2 class="section-title">Experience</h2>
         <div class="grid">
             <div class="card">
                 <span class="experience-date">May 2024 - Present</span>
                 <h3>AI/ML Engineer – Optum</h3>
-                <p>Deployed LLM-powered RAG applications using OpenAI & LangChain. Scaled inference pipelines for 9M+ records using Databricks and Kubernetes.</p>
-                <div class="tags"><span class="tag">RAG</span> <span class="tag">MLOps</span> <span class="tag">AWS</span></div>
+                <p>Deployed LLM-powered RAG applications reducing research time by 70%. Built production full-stack GenAI apps using React and FastAPI.</p>
+                <div class="tags"><span class="tag">OpenAI</span><span class="tag">LangChain</span><span class="tag">Kubernetes</span></div>
             </div>
             <div class="card">
-                <span class="experience-date">Dec 2023 - May 2025</span>
-                <h3>GenAI Researcher – Univ. of Houston</h3>
-                <p>Built biomedical literature RAG systems and agentic workflows. Achieved 82% answer accuracy on biomedical QA benchmarks.</p>
-                <div class="tags"><span class="tag">LangGraph</span> <span class="tag">Azure</span> <span class="tag">HuggingFace</span></div>
+                <span class="experience-date">2023 - 2025</span>
+                <h3>GenAI Researcher – UH</h3>
+                <p>Designed agentic workflows using LangGraph for biomedical literature. Improved iteration speed by 28% using MLflow.</p>
+                <div class="tags"><span class="tag">Azure</span><span class="tag">LangGraph</span><span class="tag">Streamlit</span></div>
             </div>
             <div class="card">
                 <span class="experience-date">2021 - 2023</span>
-                <h3>Data Analyst (ML) – Capgemini</h3>
-                <p>Designed LSTM forecasting models with 92% accuracy and ETL pipelines processing 3M+ daily records.</p>
-                <div class="tags"><span class="tag">Time Series</span> <span class="tag">Airflow</span> <span class="tag">SQL</span></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" style="background: var(--card-bg);">
-        <h2 class="section-title">Technical <span>Expertise</span></h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3><i class="fas fa-brain"></i> AI & ML</h3>
-                <ul class="skill-list">
-                    <li>Generative AI / RAG</li>
-                    <li>LLMs & Prompt Engineering</li>
-                    <li>Deep Learning (PyTorch, TF)</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Programming</h3>
-                <ul class="skill-list">
-                    <li>Python, SQL, R, Java</li>
-                    <li>C++, JavaScript, React</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-                <ul class="skill-list">
-                    <li>AWS, Azure, GCP</li>
-                    <li>Docker, Kubernetes, CI/CD</li>
-                    <li>Databricks, MLflow</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2 class="section-title">Featured <span>Projects</span></h2>
-        <div class="grid">
-            <div class="card">
-                <div class="project-img-wrapper" onclick="document.getElementById('p1-upload').click()">
-                    <img id="p1-img" src="https://via.placeholder.com/400x200?text=Click+to+Upload+Project+Image" alt="Project">
-                    <input type="file" id="p1-upload" hidden onchange="previewImage(this, 'p1-img')">
-                </div>
-                <h3>GenAI Text Summarization</h3>
-                <p>Advanced pipeline using BERT & Pegasus for abstractive summarization.</p>
-                <div class="tags"><span class="tag">NLP</span> <span class="tag">Transformers</span></div>
-            </div>
-            <div class="card">
-                <div class="project-img-wrapper" onclick="document.getElementById('p2-upload').click()">
-                    <img id="p2-img" src="https://via.placeholder.com/400x200?text=Telecom+Merger+Analysis" alt="Project">
-                    <input type="file" id="p2-upload" hidden onchange="previewImage(this, 'p2-img')">
-                </div>
-                <h3>Telecom Merger Strategy</h3>
-                <p>Simulation dashboards projecting 18% ARPU uplift through strategic merging.</p>
-                <div class="tags"><span class="tag">Finance</span> <span class="tag">Tableau</span></div>
-            </div>
-            <div class="card">
-                <div class="project-img-wrapper" onclick="document.getElementById('p3-upload').click()">
-                    <img id="p3-img" src="https://via.placeholder.com/400x200?text=EV+Market+Sales" alt="Project">
-                    <input type="file" id="p3-upload" hidden onchange="previewImage(this, 'p3-img')">
-                </div>
-                <h3>EV Market Forecasting</h3>
-                <p>End-to-end ETL pipeline for EV demand forecasting and BI visualization.</p>
-                <div class="tags"><span class="tag">Power BI</span> <span class="tag">ETL</span></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="certs">
-        <h2 class="section-title">Certifications</h2>
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-            <div class="card" style="text-align: center;">
-                <i class="fas fa-certificate" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                <h4>Oracle Generative AI</h4>
-            </div>
-            <div class="card" style="text-align: center;">
-                <i class="fas fa-certificate" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                <h4>Azure AI Foundations</h4>
-            </div>
-            <div class="card" style="text-align: center;">
-                <i class="fas fa-certificate" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                <h4>Deloitte Data Analytics</h4>
+                <h3>Data Analyst – Capgemini</h3>
+                <p>Developed time-series models (LSTM) with 92% accuracy. Processed 3M+ daily records via Airflow ETL pipelines.</p>
+                <div class="tags"><span class="tag">Scikit-learn</span><span class="tag">Airflow</span><span class="tag">Python</span></div>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <div class="card" style="text-align: center; padding: 4rem;">
-            <h2>Let's Connect</h2>
-            <p>Houston, Texas | +1-551-310-1086</p>
-            <div style="margin: 2rem 0; font-size: 1.5rem; display: flex; justify-content: center; gap: 2rem;">
-                <a href="#" style="color: var(--text)"><i class="fab fa-github"></i></a>
-                <a href="#" style="color: var(--text)"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:saisuprajaravikumar.2025@gmail.com" style="color: var(--text)"><i class="fas fa-envelope"></i></a>
+        <div class="card" style="text-align: center; border-radius: 30px; border: 2px dashed var(--primary);">
+            <h2 style="margin-bottom: 1rem;">Let's Build the Future</h2>
+            <p style="color: var(--secondary);">Currently based in Houston, Texas</p>
+            <p style="font-weight: 800; font-size: 1.2rem; margin: 1rem 0;">+1-551-310-1086</p>
+            <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 1.5rem;">
+                <a href="#" style="color: var(--text); font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                <a href="#" style="color: var(--text); font-size: 1.5rem;"><i class="fab fa-github"></i></a>
+                <a href="mailto:saisuprajaravikumar.2025@gmail.com" class="btn">Send an Email</a>
             </div>
-            <a href="mailto:saisuprajaravikumar.2025@gmail.com" class="btn">Email Me Directly</a>
         </div>
     </section>
 
     <footer>
-        © 2026 Sai Supraja Ravi Kumar | AI/ML Engineer
+        © 2026 Sai Supraja Ravi Kumar | Built with Precision & AI
     </footer>
 
     <script>
-        // Typewriter Effect
-        const words = ["Generative AI Systems", "RAG Architectures", "Scalable ML Pipelines", "Agentic AI"];
-        let i = 0, j = 0, isDeleting = false;
-        const speed = 100;
-
+        const words = ["Generative AI", "RAG Systems", "MLOps Pipelines", "Agentic Workflows"];
+        let i=0, j=0, isDeleting=false;
         function type() {
             const current = words[i];
-            const text = isDeleting ? current.substring(0, j--) : current.substring(0, j++);
-            document.getElementById("typewriter").textContent = text;
-
-            if (!isDeleting && j === current.length + 1) {
-                isDeleting = true;
-                setTimeout(type, 1000);
-            } else if (isDeleting && j === 0) {
-                isDeleting = false;
-                i = (i + 1) % words.length;
-                setTimeout(type, 500);
-            } else {
-                setTimeout(type, isDeleting ? 50 : 100);
-            }
+            document.getElementById("typewriter").textContent = isDeleting ? current.substring(0, j--) : current.substring(0, j++);
+            if(!isDeleting && j === current.length + 1) { isDeleting = true; setTimeout(type, 1500); }
+            else if(isDeleting && j === 0) { isDeleting = false; i = (i + 1) % words.length; setTimeout(type, 500); }
+            else { setTimeout(type, isDeleting ? 40 : 80); }
         }
         type();
 
-        // Theme Toggle
         function toggleTheme() {
-            const body = document.body;
-            const current = body.getAttribute('data-theme');
-            body.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+            const b = document.body;
+            b.setAttribute('data-theme', b.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
         }
 
-        // Image Preview Upload
         function previewImage(input, targetId) {
             if (input.files && input.files[0]) {
                 const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById(targetId).setAttribute('src', e.target.result);
-                }
+                reader.onload = e => document.getElementById(targetId).src = e.target.result;
                 reader.readAsDataURL(input.files[0]);
             }
         }
