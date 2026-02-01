@@ -233,25 +233,52 @@
     <section id="experience">
         <h2 class="section-title">Experience</h2>
         <div class="grid">
-            <div class="card">
-                <span class="experience-date">May 2024 - Present</span>
-                <h3>AI/ML Engineer – Optum</h3>
-                <p>• Designed and deployed LLM-powered RAG applications using OpenAI, LangChain, FAISS, and AWS to enable contextual search 
-and question answering over structured and unstructured enterprise datasets, reducing analyst research time by 65–70%.
-• Built and productionized full-stack GenAI applications using React, FastAPI, and containerized backends, delivering interactive 
-AI assistants with ~90% factual accuracy.
-• Developed machine learning models (Random Forest, Gradient Boosting, Neural Networks) on large-scale healthcare and financial 
-datasets to support risk prediction and decision support, improving model precision and downstream decisions by 20%+.
-• Architected scalable data and inference pipelines using Databricks, Spark, FAISS, Docker, and Kubernetes, supporting 9M+ 
-records with low-latency retrieval.
-• Deployed end-to-end ML and GenAI workflows on AWS (Lambda, SageMaker, API Gateway, CloudWatch) and Azure, reducing 
-deployment latency by 40%.
-• Implemented model monitoring, logging, and CI/CD pipelines, collaborating with cross-functional teams through code reviews 
-and design discussions to ensure production reliability and scalability.
-• Applied model explainability techniques (SHAP) and governance best practices to support compliance, transparency, and trust in 
-AI-driven decisions.</p>
-                <div class="tags"><span class="tag">OpenAI</span><span class="tag">LangChain</span><span class="tag">Kubernetes</span></div>
-            </div>
+           <div class="card" style="grid-column: 1 / -1;"> <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+        <div>
+            <span class="experience-date">May 2024 - Present</span>
+            <h3 style="font-size: 1.6rem; margin: 0.2rem 0;">AI/ML Engineer – Optum</h3>
+        </div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Optum_logo.svg/2560px-Optum_logo.svg.png" alt="Optum" style="height: 25px; filter: grayscale(1) opacity(0.7);">
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <ul style="list-style: none; color: var(--secondary); font-size: 0.95rem;">
+            <li style="margin-bottom: 0.8rem;">
+                <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i>
+                <strong>Generative AI:</strong> Deployed RAG applications using <b>LangChain & FAISS</b>, reducing analyst research time by <b>70%</b>.
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+                <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i>
+                <strong>Production Apps:</strong> Built full-stack GenAI tools with <b>React & FastAPI</b>, achieving <b>90% factual accuracy</b>.
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+                <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i>
+                <strong>Predictive Modeling:</strong> Improved model precision by <b>20%</b> using Random Forest and Neural Networks for risk prediction.
+            </li>
+        </ul>
+
+        <ul style="list-style: none; color: var(--secondary); font-size: 0.95rem;">
+            <li style="margin-bottom: 0.8rem;">
+                <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i>
+                <strong>Scalable Infrastructure:</strong> Architected <b>Kubernetes & Databricks</b> pipelines to process <b>9M+ records</b>.
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+                <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i>
+                <strong>Cloud MLOps:</strong> Reduced deployment latency by <b>40%</b> using AWS Lambda, SageMaker, and CI/CD.
+            </li>
+            <li style="margin-bottom: 0.8rem;">
+                <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i>
+                <strong>Explainable AI:</strong> Integrated <b>SHAP</b> for model governance and transparency in healthcare decisions.
+            </li>
+        </ul>
+    </div>
+
+    <div class="tags" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+        <span class="tag">OpenAI</span> <span class="tag">LangChain</span> <span class="tag">FAISS</span> 
+        <span class="tag">AWS SageMaker</span> <span class="tag">FastAPI</span> <span class="tag">Kubernetes</span>
+        <span class="tag">Databricks</span> <span class="tag">SHAP</span>
+    </div>
+</div>
             <div class="card">
                 <span class="experience-date">2023 - 2025</span>
                 <h3>GenAI Researcher – UH</h3>
@@ -311,6 +338,7 @@ AI-driven decisions.</p>
     </script>
 </body>
 </html>
+
 
 
 
