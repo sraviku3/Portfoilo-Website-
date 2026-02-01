@@ -4,17 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
 <title>Sai Supraja Ravi Kumar | AI/ML Engineer</title>
-<meta name="description" content="AI/ML Engineer specializing in Generative AI, RAG systems, LLMs, and scalable machine learning platforms.">
-<meta name="keywords" content="AI Engineer, Machine Learning, Generative AI, RAG, LLM, Data Science">
-<meta name="author" content="Sai Supraja Ravi Kumar">
 
-<!-- OpenGraph -->
-<meta property="og:title" content="Sai Supraja Ravi Kumar | AI/ML Engineer">
-<meta property="og:description" content="Building Generative AI systems, scalable ML platforms, and intelligent applications.">
-<meta property="og:image" content="assets/profile.jpg">
-<meta property="og:type" content="website">
+<!-- SEO -->
+<meta name="description" content="AI/ML Engineer & Data Scientist specializing in Generative AI, RAG systems, LLMs, and scalable ML platforms.">
+<meta name="keywords" content="AI Engineer, Machine Learning, Data Scientist, Generative AI, RAG, LLM">
+<meta name="author" content="Sai Supraja Ravi Kumar">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,8 +21,9 @@
 --border:rgba(255,255,255,.08);
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:var(--bg);color:var(--white);overflow-x:hidden}
+body{background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6}
 
+/* NAV */
 nav{
 position:fixed;top:0;width:100%;z-index:1000;
 display:flex;justify-content:space-between;align-items:center;
@@ -41,6 +37,7 @@ border-bottom:1px solid var(--border)
 .nav-links a{color:var(--grey);text-decoration:none;font-size:.85rem}
 .nav-links a:hover{color:var(--red)}
 
+/* HERO */
 .hero{
 min-height:100vh;display:flex;flex-direction:column;
 justify-content:center;align-items:center;text-align:center;padding:0 10%
@@ -83,7 +80,10 @@ border-radius:20px;padding:2rem;transition:.4s
 }
 .card:hover{transform:translateY(-8px);border-color:var(--red)}
 
-.card img{width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:1rem}
+.card img{
+width:100%;height:180px;object-fit:cover;
+border-radius:12px;margin-bottom:1rem
+}
 
 .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
 .tag{font-size:.7rem;border:1px solid var(--border);padding:4px 10px;border-radius:4px;color:var(--grey)}
@@ -110,15 +110,18 @@ footer{text-align:center;padding:2rem;color:var(--grey);font-size:.8rem}
 <nav>
 <a class="logo" href="#">SAI<span>SUPRAJA</span></a>
 <ul class="nav-links">
+<li><a href="#experience">Experience</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
 <li><a href="#certs">Certifications</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
-<section class="hero">
+<!-- HERO -->
+<section class="hero" id="home">
 <div class="hero-avatar">
-<img src="assets/profile.jpg" alt="Sai Supraja">
+<img src="assets/profile.jpg" alt="Sai Supraja Ravi Kumar">
 </div>
 <h1>Sai Supraja Ravi Kumar</h1>
 <h2>Building <span id="typewriter-text"></span></h2>
@@ -132,26 +135,55 @@ footer{text-align:center;padding:2rem;color:var(--grey);font-size:.8rem}
 <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
 </section>
 
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+<h2>Professional <span>Experience</span></h2>
+<div class="grid">
+
+<div class="card">
+<h3>AI/ML Engineer – Optum</h3>
+<p>Built LLM-powered RAG applications reducing research time by 70%. Designed scalable inference pipelines over 9M+ records.</p>
+<div class="tags"><span class="tag">OpenAI</span><span class="tag">LangChain</span><span class="tag">AWS</span></div>
+</div>
+
+<div class="card">
+<h3>GenAI Researcher – University of Houston</h3>
+<p>Developed biomedical RAG systems and agentic workflows using LangGraph.</p>
+<div class="tags"><span class="tag">Transformers</span><span class="tag">Azure</span></div>
+</div>
+
+<div class="card">
+<h3>Data Analyst (ML) – Capgemini</h3>
+<p>Implemented LSTM forecasting with 92% accuracy and ETL pipelines processing 3M+ records.</p>
+<div class="tags"><span class="tag">LSTM</span><span class="tag">Airflow</span></div>
+</div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
 <section class="section" id="projects">
 <h2>Featured <span>Projects</span></h2>
 <div class="grid">
 
 <div class="card">
-<img src="assets/project-rag.jpg">
+<img src="assets/project-summarization.jpg">
 <h3>GenAI Text Summarization</h3>
-<p>RAG-based abstractive summarization using Transformers.</p>
+<p>Abstractive NLP pipeline using Transformers & RAG.</p>
 <div class="project-links">
-<a href="#">Live</a><a href="#">GitHub</a>
+<a href="#" target="_blank">Live Demo</a>
+<a href="#" target="_blank">GitHub</a>
 </div>
-<div class="tags"><span class="tag">RAG</span><span class="tag">LLM</span></div>
+<div class="tags"><span class="tag">NLP</span><span class="tag">LLM</span></div>
 </div>
 
 <div class="card">
 <img src="assets/project-telecom.jpg">
 <h3>Telecom Merger Strategy</h3>
-<p>Revenue simulation dashboard with scenario analysis.</p>
+<p>Financial simulation dashboards showing ARPU uplift.</p>
 <div class="project-links">
-<a href="#">Live</a><a href="#">GitHub</a>
+<a href="#" target="_blank">Live</a>
+<a href="#" target="_blank">GitHub</a>
 </div>
 <div class="tags"><span class="tag">Forecasting</span><span class="tag">Tableau</span></div>
 </div>
@@ -159,9 +191,10 @@ footer{text-align:center;padding:2rem;color:var(--grey);font-size:.8rem}
 <div class="card">
 <img src="assets/project-ev.jpg">
 <h3>EV Market Forecasting</h3>
-<p>End-to-end ETL and BI pipeline for EV demand.</p>
+<p>End-to-end ETL + BI pipeline for EV demand analysis.</p>
 <div class="project-links">
-<a href="#">Live</a><a href="#">GitHub</a>
+<a href="#" target="_blank">Live</a>
+<a href="#" target="_blank">GitHub</a>
 </div>
 <div class="tags"><span class="tag">ETL</span><span class="tag">SQL</span></div>
 </div>
@@ -169,6 +202,20 @@ footer{text-align:center;padding:2rem;color:var(--grey);font-size:.8rem}
 </div>
 </section>
 
+<!-- SKILLS -->
+<section class="section" id="skills">
+<h2>Technical <span>Expertise</span></h2>
+<div class="grid">
+
+<div class="card"><h3>AI / ML</h3><p>Generative AI, RAG, LLMs, NLP, Deep Learning</p></div>
+<div class="card"><h3>Programming</h3><p>Python, SQL, R, Java, C++, JavaScript</p></div>
+<div class="card"><h3>Cloud & Data</h3><p>AWS, Azure, Databricks, Spark, Snowflake</p></div>
+<div class="card"><h3>DevOps</h3><p>Docker, Kubernetes, MLflow, Airflow, CI/CD</p></div>
+
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
 <section class="section" id="certs">
 <h2>Professional <span>Certifications</span></h2>
 <div class="grid">
@@ -176,31 +223,29 @@ footer{text-align:center;padding:2rem;color:var(--grey);font-size:.8rem}
 <div class="card cert-card">
 <img src="assets/cert-aws.png">
 <h3>AWS Machine Learning</h3>
-<p>Amazon Web Services</p>
 </div>
 
 <div class="card cert-card">
 <img src="assets/cert-azure.png">
 <h3>Azure AI Engineer</h3>
-<p>Microsoft</p>
 </div>
 
 <div class="card cert-card">
 <img src="assets/cert-gcp.png">
 <h3>Google Data Engineer</h3>
-<p>Google Cloud</p>
 </div>
 
 </div>
 </section>
 
+<!-- CONTACT -->
 <section class="section" id="contact">
 <h2>Get In <span>Touch</span></h2>
 <p style="text-align:center;color:var(--grey)">
-MS Data Science @ University of Houston (GPA 3.98)
+MS Data Science · University of Houston · GPA 3.98
 </p>
 <div style="text-align:center;margin-top:2rem">
-<a href="mailto:saisuprajaravikumar.2025@gmail.com" class="btn">Email Me</a>
+<a href="mailto:saisuprajaravikumar.2025@gmail.com" class="btn">Send Email</a>
 </div>
 </section>
 
